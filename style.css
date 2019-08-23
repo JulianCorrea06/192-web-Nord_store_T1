@@ -107,12 +107,16 @@ position: relative;
 }
 
 .content{
+    font-family: 'Montserrat', sans-serif;
     display: inline-flex;
     justify-content: space-evenly;
     position: absolute;
     width: 100%;
     top: 115vw;
    
+}
+.content ul{
+    padding-top: 5%;
 }
 
 .feature__cont{
