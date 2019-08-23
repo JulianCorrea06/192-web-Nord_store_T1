@@ -1,3 +1,126 @@
 body{
     margin: 0;
+   
 }
+
+.header{
+    background-color: #bc0404;
+    border-radius: 0 0 1rem 1rem;
+    display: flex;
+    height: 65px;
+    max-width: 100%;
+    flex-flow: row wrap;
+}
+
+.header__logotipo{
+    padding-left: 10%;
+    padding-right: 30px; 
+    width: auto;
+    height: 60%;
+    margin: 10px;
+}
+
+.header__menu{
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 100px;
+    color: #fff;
+    font-size: 100%;
+    
+    text-decoration: none;
+    padding-top: 23px;
+    display: inline-block;
+    right: 20%;
+}
+
+.hypertext{
+    padding-left: 20px;
+    padding-right: 20px; 
+
+    text-decoration: none;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+.imagecar img{
+    height: 70px;
+    width: auto;
+    padding: 15px;
+    fill: #fff;
+}
+
+.portada__img{
+    position: absolute;
+    top: -20px;
+    width: 100%;   
+   z-index: -1;
+}
+
+.transicion{
+    position: relative;
+    
+}
+.transicion__img{
+    position: absolute;
+    width: 100%;
+    top: 49vw;
+}
+
+.transicion__img--2{
+    position: absolute;
+    width: 60%;
+    top: 70vw;
+    left: 20vw;
+}
+
+.intro{
+    
+    position: relative;
+    top: 90vw;
+    left: 20vw;
+    width: 60%;
+    color: gray;
+    margin-bottom: 50px;
+}
+
+.transicion__text{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+   
+}
+
+.transicion__text--2{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.feature{
+position: relative;
+}
+
+.feature__car{
+    position: absolute;
+    width: 100%;
+    top: 95vw;
+
+    
+}
+
+.content{
+    display: inline-flex;
+    justify-content: space-evenly;
+    position: absolute;
+    width: 100%;
+    top: 115vw;
+   
+}
+
+.feature__cont{
+    width: 40%;
+    height: auto;
+}
+
+
+
+
+
