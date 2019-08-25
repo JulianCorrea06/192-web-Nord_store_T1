@@ -98,11 +98,21 @@ body{
 position: relative;
 }
 
+.galery{
+    position: relative;
+    width: 100%;
+    top: 200vw;
+}
+
 .feature__car{
     position: absolute;
     width: 100%;
     top: 95vw;
+}
 
+.galery__port{
+    position: relative;
+    width: 100%;
     
 }
 
@@ -116,14 +126,44 @@ position: relative;
    
 }
 .content ul{
-    padding-top: 5%;
+    padding-top: 14%;
 }
+
 
 .feature__cont{
     width: 40%;
     height: auto;
 }
 
+.content--2{
+    font-family: 'Montserrat', sans-serif;
+    display: inline-flex;
+    justify-content: space-evenly;
+    position: absolute;
+    width: 100%;
+    top: 160vw;
+   
+}
+
+.feature__cont--2{
+    width: 40%;
+    height: auto;
+}
+
+.mosaico{
+    display: inline-flex;
+    
+}
+
+.galery__grupo{
+   position: relative;
+    
+}
+
+.mosaico img{
+    width: 33%;
+    
+}
 
 
 
