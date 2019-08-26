@@ -10,6 +10,7 @@ body{
     height: 65px;
     max-width: 100%;
     flex-flow: row wrap;
+    margin-bottom: 49vw;
 }
 
 .header__logotipo{
@@ -54,29 +55,31 @@ body{
     top: -20px;
     width: 100%;   
    z-index: -1;
+   
 }
 
 .transicion{
     position: relative;
     
+    
 }
 .transicion__img{
-    position: absolute;
+    position: relative;
     width: 100%;
-    top: 49vw;
+    
 }
 
 .transicion__img--2{
-    position: absolute;
+    position: relative;
     width: 60%;
-    top: 70vw;
+    
     left: 20vw;
 }
 
 .intro{
     
     position: relative;
-    top: 90vw;
+    
     left: 20vw;
     width: 60%;
     color: gray;
@@ -101,13 +104,14 @@ position: relative;
 .galery{
     position: relative;
     width: 100%;
-    top: 200vw;
+    
 }
 
 .feature__car{
-    position: absolute;
+    position: relative;
     width: 100%;
-    top: 95vw;
+    
+    
 }
 
 .galery__port{
@@ -120,9 +124,12 @@ position: relative;
     font-family: 'Montserrat', sans-serif;
     display: inline-flex;
     justify-content: space-evenly;
-    position: absolute;
+    position: relative;
     width: 100%;
-    top: 115vw;
+
+    margin-bottom: 5%;
+    margin-top: 5%;
+    
    
 }
 .content ul{
@@ -139,9 +146,11 @@ position: relative;
     font-family: 'Montserrat', sans-serif;
     display: inline-flex;
     justify-content: space-evenly;
-    position: absolute;
+    position: relative;
     width: 100%;
-    top: 160vw;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    
    
 }
 
@@ -152,17 +161,36 @@ position: relative;
 
 .mosaico{
     display: inline-flex;
-    
+    width: 100%;
 }
 
 .galery__grupo{
-   position: relative;
-    
+   position: relative; 
 }
 
 .mosaico img{
-    width: 33%;
-    
+    width: 33.333%;
+}
+
+.galery{
+    background-color: rgb(37, 37, 37);
+}
+
+.suscription{
+    position: relative;
+    width: 100%;
+    background-color: #38383c;
+}
+
+.suscription__port{
+    position: relative;
+    width: 100%;
+}
+
+.suscription__group{
+    font-family: 'Montserrat', sans-serif;
+    display: inline-flex;
+    justify-content: space-evenly;
 }
 
 
