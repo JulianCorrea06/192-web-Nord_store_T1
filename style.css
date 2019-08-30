@@ -277,7 +277,7 @@ height: auto;
     border-collapse: separate;
     border-spacing: 5px;
     border-color: grey;
-    font-family: 'Montserrat', sans-serif;Ky
+    font-family: 'Montserrat', sans-serif;
 }
 
 .details__table th{
@@ -298,6 +298,49 @@ height: auto;
     font-size: 18px;
 }
 
+.interact {
+   
+    
+    font-family: 'Montserrat', sans-serif;
+    
+    color: #fff;
+    background-color: #bc0404;
+    text-align: center;
+    
+    padding-bottom: 5%;
+    
+}
+
+.interact p{
+    margin-top: 5%;
+    margin-block-end: 0;
+    font-size: 28px;
+}
+
+.interact__buttons img{
+   padding: 5%;
+   
+}
+.adds{
+    display: flex;
+    widows: 50px;
+}
+.adds__images img{
+    
+    
+    width: 20%;
+}
+
+footer{
+    font-family: 'Montserrat', sans-serif;
+    
+    color: #fff;
+    background-color: #242424;
+    text-align: center;
+    
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
 
 
 
