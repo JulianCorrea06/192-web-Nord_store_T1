@@ -245,6 +245,7 @@ body{
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 5%; 
+    
     display: table;
     border-collapse: separate;
     border-spacing: 5px;
@@ -284,6 +285,8 @@ body{
 .interact__buttons img{
    padding: 5%;
 }
+
+
 
 .adds{
     display: flex;

@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nord Piano 4</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet">
+    
 </head>
 
 
 <body>
     
-
+    <audio id="S1" class="MusicSound" src="DATA/furElise.mp3" autoplay></audio>
+   
     <div class="header">
 
         <div class="header__logotipo">    
@@ -19,10 +21,10 @@
         </div>
 
         <div class="header__menu">
-            <a class="hypertext" href="#">Home</a>
-            <a class="hypertext" href="#">Gallery</a>
-            <a class="hypertext" href="#">Descriptions</a>
-            <a class="hypertext" href="#">Suscribe</a>    
+            <a class="hypertext" href="#Home">Home</a>
+            <a class="hypertext" href="#Gallery">Gallery</a>
+            <a class="hypertext" href="#Description">Descriptions</a>
+            <a class="hypertext" href="#Suscribe">Suscribe</a>    
         </div>
        
     </div>
@@ -37,7 +39,7 @@
         <img class ="transicion__img2" src="DATA/titulo.png" alt="">
     </div>
     
-    <div class="intro">
+    <div id="Home" class="intro">
         <p class="transicion__text">
             The fourth generation of our award-winning Piano series combines greatly expanded voice polyphony, a premium Triple Sensor keybed and our acclaimed Virtual Hammer Action Technology for the ultimate piano experience.
          </p>
@@ -87,7 +89,7 @@
 
     </section>
 
-    <section class="galery">
+    <section id="Gallery" class="galery">
         <img class="galery__port" src="DATA/galeria.png" alt="galery_intro">
 
         <div class="galery__grupo">
@@ -113,7 +115,7 @@
 
     
 
-    <section class="details">
+    <section id="Description" class="details">
         <img class="details__port" src="DATA/details.png" alt="details_port">
         
         <div class="details__content">
@@ -208,16 +210,16 @@
         <p>Escoge de una lista de canciones para practicar</p>
 
         <div class="interact__buttons">
-            <img src="/DATA/BTN1.png" alt="">
-            <img src="/DATA/BTN2.png" alt="">
-            <img src="/DATA/BTN3.png" alt="">
+            <img src="/DATA/BTN1.png" onclick="document.getElementById('S1').src='DATA/sans.mp3'" alt="">
+            <img src="/DATA/BTN2.png" onclick="document.getElementById('S1').src='DATA/pirateMusic.mp3'"alt="">
+            <img src="/DATA/BTN3.png" onclick="document.getElementById('S1').src='DATA/up.mp3'"alt="">
         </div>
 
     </section>
 
 
 
-    <section class="suscription">
+    <section id="Suscribe" class="suscription">
             <img class="suscription__port" src="DATA/nordFrente.png" alt="suscribete_banner">
             <div class="suscription__group">
     
@@ -259,13 +261,14 @@
         <footer>
             <p>Sigue Nuestras redes sociales </p>
             <div class="footer__img">
-                <img src="/DATA/instagram.png" alt="">
+                <img src="/DATA/instagram.png" alt="" >
                 <img src="/DATA/facebook.png" alt="">
                 <img src="/DATA/twiter.png" alt="">
                 
             </div>
         </footer>
 
+        <script src="main.js"></script>
 </body>
 
 </html>
