@@ -121,9 +121,7 @@ body{
     height: auto;
 }
 
-.feature__block{
-    width: 
-}
+
 .title{
     font-family: 'Montserrat', sans-serif;
     top:0vw;
@@ -264,7 +262,7 @@ body{
     margin-top: 20px;
     margin-left: 5%;
     margin-right: 5%;
-    margin-bottom: 5%; 
+    margin-bottom: 10%; 
     
     display: table;
     border-collapse: separate;
@@ -273,11 +271,31 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+
 .details__table th{
     padding: .2em .8em;
     background: #bc0404;
     text-align: center;
 }
+
+.solo_th{
+    margin-top: 50%px;
+}
+
+.table_titles{
+    padding: .2em .8em;
+    background: #bc0404;
+    text-align: center;
+}
+
+.details__content{
+    display: none;
+}
+
+.details__content2{
+
+}
+
 
 .details__table td{
     padding: .2em .8em;
@@ -441,6 +459,78 @@ align-content: center;
         bottom: 80px;
         margin-bottom: -70px;
     }
+
+
+}
+
+@media (max-width: 360px){
+    .header__logotipo{
+        margin-top: 20px;;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .header__menu{
+        font-size: 10px;
+        padding-left:0;
+        margin-left:auto;
+        margin-right: auto;
+    }
+
+    .feature__cont{
+        width: 60%;
+        height: auto;
+        margin-left: 19vw;
+        margin-bottom: 20px;
+    }
+
+    .feature__cont_2{
+        width: 60%;
+        height: auto;
+        margin-left: 19vw;
+        margin-bottom: 20px;
+    }
+    .content{
+        width: 100%;
+    }
+
+    .mosaico{
+        height: 570px;
+        flex-direction: column;     
+        flex-flow:column;   
+        flex-wrap: wrap;
+    }
+
+    .mosaico img{
+        width: 50%;
+    }
+
+    .details__content h4{
+        font-size: 80%;
+    }
+
+    .details__content2{
+        display: flex;
+    flex-flow: column;
+    padding-top: 5%;
+    padding-bottom: 3%;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    }
+
+    .interact p{
+        font-size: 18px;
+        width: 90%;
+        
+        margin-left:auto;
+        margin-right: auto; 
+    }
+
+    
+
 }
 
 
