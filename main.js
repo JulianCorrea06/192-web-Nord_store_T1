@@ -12,10 +12,13 @@ function handleScroll(event){
             }
         }
 }
+
 window.addEventListener('scroll', handleScroll);
 
 var musicButton = document.getElementById('S1');
 
+
+//---------------------------------------------------
 
 function handleClick(event){
     var options = document.querySelectorAll('interact__buttons');
@@ -44,6 +47,7 @@ function handleClick(event){
 
 
 musicButton.addEventListener('Click', handleClick);
+
 
 
 

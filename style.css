@@ -1,3 +1,7 @@
+*{
+    scroll-behavior: smooth;
+}
+
 body{
     margin:0;
    
@@ -34,12 +38,35 @@ body{
 }
 
 .hypertext{
+    
     padding-left: 20px;
     padding-right: 20px; 
     text-decoration: none;
     color: #fff;
     outline: none;
     cursor: pointer;
+    
+}
+.hypertext:hover{
+    opacity: 0.8;
+}
+
+.portada__text--2{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    position: absolute;
+    bottom: 20%;
+    padding-left: 9%; 
+    font-size: 3vw;
+}
+.portada__text{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    position: absolute;
+    bottom: 20%;
+    font-size:6vw;
+    padding-left: 5%; 
+
 }
 
 .portada__img{
@@ -228,6 +255,7 @@ body{
     color: #fff;
     background-color: #bc0404;
     border: 0;
+    cursor: pointer;
 }
 .details{
     background-color: #38383c;
@@ -332,6 +360,15 @@ body{
 
 .interact__buttons img{
    padding: 5%;
+   cursor: pointer;
+
+}
+.interact__buttons img:hover{
+opacity: 0.6;
+}
+
+.interact__btn:hover{
+    opacity: 0.6;
 }
 
 
@@ -394,6 +431,27 @@ align-content: center;
     width: 100%;
     height: auto;
 }
+.adds{
+    margin-top: 2%;
+ }
+ .adds__blocks{
+     margin-left: auto;
+     margin-right: auto;
+     width: 33.3%
+ }
+
+ .adds__line{
+     
+     width: 100%;
+     font-size: 12px;
+     margin: 0;
+ }
+
+ .adds img{
+     width: 100px;
+     height: 75px;
+     margin: 0;
+ }
 
 @media (max-width: 750px){
     .header{
@@ -489,6 +547,24 @@ align-content: center;
          height: 75px;
          margin: 0;
      }
+
+     .portada__text--2{
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+        position: absolute;
+        bottom: 30%;
+        padding-left: 9%; 
+        font-size: 3vw;
+    }
+    .portada__text{
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+        position: absolute;
+        bottom: 30%;
+        font-size:6vw;
+        padding-left: 5%; 
+    
+    }
 
 
 }
@@ -604,6 +680,24 @@ align-content: center;
     .footer__img{
         margin-top: auto;
         margin-bottom: auto;
+    }
+
+    .portada__text--2{
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+        position: absolute;
+        bottom: 60%;
+        padding-left: 9%; 
+        font-size: 3vw;
+    }
+    .portada__text{
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+        position: absolute;
+        bottom: 60%;
+        font-size:6vw;
+        padding-left: 5%; 
+    
     }
 
     
