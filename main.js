@@ -20,30 +20,7 @@ var musicButton = document.getElementById('S1');
 
 //---------------------------------------------------
 
-function handleClick(event){
-    var options = document.querySelectorAll('interact__buttons');
-    for(var i=0; i < options.length;i++){
-        var option = options[i];
-        var selector = option.getAttribute('src');
-        var title = document.querySelector(selector);
-        var titulo = selector.toString;
 
-        comparador = new String (titulo);
-
-        
-
-        if(comparador == "/DATA/BTN1.png"){
-        option.setAttribute('src','/DATA/BTN1act.png');
-
-        }
-        if(title== "/DATA/BTN2.png"){
-        option.setAttribute('src','/DATA/BTN2act.png');
-        }
-        if(title== "/DATA/BTN3.png"){
-        option.setAttribute('src','/DATA/BTN3act.png');
-        }
-    }
-}
 
 
 musicButton.addEventListener('Click', handleClick);
