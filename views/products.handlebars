@@ -1,0 +1,46 @@
+{{#each products}}
+
+<div class="filters">
+         <strong>Ordenar por:<button class="filter" href="#"><strong>Todos ›</strong></button></strong>   
+        <hr>
+</div>
+
+<section class="options">
+    <h2 class="title">TIENDA</h2>
+    <h3 class="subtitle"> Rango de Precio</h3>
+    <input class="buffer__slider" type="range" value="0" min="0" max="100" autocomplete="off">
+    <div class="buffer__label">1</div>
+
+    <h3 class="subtitle"> Estilo</h3>
+    <form class="options__form">
+       <p class="form__text"><input class ="selection" type="radio" name="Estilo" value="Clasico"> Clásico<br></p>
+       <p class="form__text"> <input type="radio" name="Estilo" value="Novedoso"> Novedoso<br></p>
+        
+      </form>
+    <h3 class="subtitle"> Tamaño</h3>
+      <form class="options__form2">
+        <p class="form__text"><input class ="selection" type="radio" name="Size" value="Small"> Pequeño<br></p>
+        <p class="form__text"> <input type="radio" name="Size" value="Medium"> Medio<br></p>
+        <p class="form__text"> <input type="radio" name="Size" value="Big"> Grande<br></p>
+        <p class="form__text"> <input type="radio" name="Size" value="VeryBig"> Muy grande<br></p>
+         
+       </form>
+
+</section>  
+<section class="products">
+<div class="items">
+        <div class="item">
+            <img class="item_img" src="data{{image}}" alt="item_img">
+            <div class="name">{{name}}</div>
+            <div class="price">{{price}}</div>
+            <img class="kart" src="/src/img/kart.png" alt="kart">
+        </div>
+</div>
+</section>
+
+
+{{/each}}
+
+
+
+<script src="/scripts/store.js"> </script>

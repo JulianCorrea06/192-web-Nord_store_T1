@@ -1,4 +1,6 @@
-function handleScroll(event){
+window.addEventListener('load', function(){ 
+
+    function handleScroll(event){
 
         var nav = document.querySelector('.header__menu');
         var navItems = nav.querySelectorAll('.hypertext');
@@ -24,6 +26,10 @@ var musicButton = document.getElementById('S1');
 
 
 musicButton.addEventListener('Click', handleClick);
+
+
+
+ });
 
 
 
