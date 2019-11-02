@@ -1,6 +1,7 @@
 
 html{
     scroll-behavior: smooth;
+    
 }
 body{
     margin:0;
@@ -16,6 +17,7 @@ body{
     flex-flow: row wrap;
     z-index: 3;
     position: fixed;
+    top: -2px;
 }
 
 .header__logotipo{
@@ -24,6 +26,7 @@ body{
     width: auto;
     height: 60%;
     margin: 10px;
+    margin-right: 5vw;
 }
 .header__logotipo img{
     height: 80%;
@@ -76,9 +79,14 @@ width: auto;
 .options{
     background-color: white;
     position: fixed;
+    padding-bottom: 2em;
+    border-radius: 5px;
+    bottom: 40px;
+}
 
-
-
+.filter_line{
+    margin-left: 350px;
+    margin-right: 50px;
 }
 
 input[type="radio"], 
@@ -113,6 +121,16 @@ input[type="checkbox"]:checked {
 .products{
     margin-left:25vw ;
 }
+
+
+.filter__select{
+width: 50%;
+border: none;
+border-bottom: 2px solid rgb(201, 201, 201);
+font-size:18px;
+margin:20px;
+}
+
 .title{
     background-color: #bc0404;
     border-radius: 3px;
@@ -129,8 +147,9 @@ input[type="checkbox"]:checked {
     padding-left:3vw;
 }
 .buffer__slider{
-   padding-left: 4vw;
+   padding-left: 3vw;
     width: 60%;
+    outline: none;
 }
 .buffer__slider:hover{
 
@@ -181,9 +200,14 @@ margin-top: -7px;
 }
     
 .kart{
+    align-self: flex-end;
+    margin-top:-6vw;
+    
+   
     display: flex;
     align-content: flex-end;
-    width: 20%;
+    width: 40px;
+    height: 100px;
     padding: 1.5vw;
 }
 .hrc{
@@ -197,7 +221,7 @@ margin-top: -7px;
 }
 .items{
     widows: 100%;
-    display:flex;
+    display:inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
@@ -206,7 +230,7 @@ margin-top: -7px;
 }
 .item{
    
-    width: 28vw;
+    width: 24vw;
     height:14vw;
     display: flex;
     flex-direction: column;
@@ -239,19 +263,14 @@ margin-top: -7px;
 
 }
 
-.kart{
-    align-self: flex-end;
-    margin-top:-6vw;
-    width: 3vw;
-   
-}
+
 .name{
     align-self: flex-start;
     margin-left: 0.5vw;
     margin-top: 4vw;
     font-size: 1.8vw;;
     font-family: 'Montserrat', sans-serif;
-    color: gray;
+    color: dimgray;
 
 }
 .price{
@@ -260,28 +279,32 @@ margin-top: -7px;
     margin-top: 0.6vw;
     font-size: 1.8vw;;
     font-family: 'Montserrat', sans-serif;
-    color: gray;
+    color: dimgray;
 }
 .hr{
     opacity: 250%;
 }
-.filters{
-    margin:2vw;
-    align-content: center;
-    align-items: center;
-    margin-bottom: 0;
-    margin-top: 0;
-    font-size: 1.5vw;
-    font-family: 'Montserrat', sans-serif;
-}
+
 .filter{
-    margin:2vw;
+    margin:0.5vw;
     margin-left: 0.5vw;
     font-size: 1.5vw;
     font-family: 'Montserrat', sans-serif;
     color: black;
     background-color: none;
     border:none;
+    margin:2vw;
+    display: inline-flex;
+    width: 80%;;
+    margin-left: 400px;
+    margin-top:5vw;
+    padding-top: 6vw;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 1.5vw;
+    font-family: 'Montserrat', sans-serif;
 }
 .filter:hover{
     cursor: pointer;
@@ -315,4 +338,9 @@ footer{
     font-family: 'Montserrat', sans-serif;
     color:white;
     font-size:1vw;
+}
+
+.products{
+    flex-direction: row;
+    flex-wrap: wrap;
 }

@@ -1,15 +1,24 @@
-{{#each products}}
-
-<div class="filters">
-         <strong>Ordenar por:<button class="filter" href="#"><strong>Todos ›</strong></button></strong>   
-        <hr>
+<div class="filter">
+  <h5>Ordernar por:</h5>
+          <select name="sort" class="filter__select">
+            <option value="none">Ninguno</option>
+            <option value="mayor_precio">Mayor Precio</option>
+            <option value="menor_precio">Menor Precio</option>
+            <option value="mayor_popularidad">Mayor Popularidad</option>
+            <option value="mayor_tamaño">Mayor Popularidad</option>
+            <option value="menor_tamaño">Mayor Popularidad</option>
+          </select>
+     
 </div>
+
+   <hr class="filter_line">
+
 
 <section class="options">
     <h2 class="title">TIENDA</h2>
     <h3 class="subtitle"> Rango de Precio</h3>
-    <input class="buffer__slider" type="range" value="0" min="0" max="100" autocomplete="off">
-    <div class="buffer__label">1</div>
+    <input class="buffer__slider" type="range" value="0" min="100" max="21000000" autocomplete="off">
+    <div class="buffer__label"> </div>
 
     <h3 class="subtitle"> Estilo</h3>
     <form class="options__form">
@@ -27,19 +36,22 @@
        </form>
 
 </section>  
+
 <section class="products">
+{{#each products}}
 <div class="items">
         <div class="item">
             <img class="item_img" src="data{{image}}" alt="item_img">
             <div class="name">{{name}}</div>
-            <div class="price">{{price}}</div>
-            <img class="kart" src="/src/img/kart.png" alt="kart">
+            <div class="price">$ {{price}}</div>
+            <img class="kart" src="/data/kart.png" alt="kart">
         </div>
 </div>
+{{/each}}
 </section>
 
 
-{{/each}}
+
 
 
 
