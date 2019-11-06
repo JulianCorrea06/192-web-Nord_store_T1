@@ -44,7 +44,7 @@
             <Button class="itemBtn"><a href="/store/{{this._id}}"><img class="item_img" src="data{{image}}" alt="item_img"></Button></a></Button>
             <div class="name">{{name}}</div>
             <div class="price">$ {{price}}</div>
-            <Button class="kart_btn"><img class="kart" src="/data/kart.png" alt="kart"></Button>
+            <Button data-id="{{_id}}" class="kart_btn"><img class="kart" src="/data/kart.png" alt="kart"></Button>
         </div>
 </div>
 {{/each}}

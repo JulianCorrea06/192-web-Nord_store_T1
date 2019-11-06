@@ -24,6 +24,22 @@ function createRoutes (app, db) {
             });
     });
 
+    app.get('/kart', (request, response) => {
+        const car = db.collection('carProducts');
+
+        //buscamos todos los productos
+        car.find({})
+            //transformamos el cursor a una arreglo
+            .toArray((err, result) => {
+                //aseguramos de que no hay error
+                assert.equal(null, err);
+
+                var context = {product: result[0]};
+
+                response.render('carProducts',context);
+            });
+    });
+
     app.get('/store/:id', (request, response) => {
 
         var id = request.params.id;
@@ -41,6 +57,9 @@ function createRoutes (app, db) {
                 response.render('description',context);
             });
     });
+
+
+    
 }
 
 module.exports = createRoutes;
