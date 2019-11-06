@@ -23,6 +23,24 @@ function createRoutes (app, db) {
                 response.render('products',context);
             });
     });
+
+    app.get('/store/:id', (request, response) => {
+
+        var id = request.params.id;
+        const products = db.collection('products');
+
+        //buscamos todos los productos
+        products.find({"_id": new ObjectID(id)})
+            //transformamos el cursor a una arreglo
+            .toArray((err, result) => {
+                //aseguramos de que no hay error
+                assert.equal(null, err);
+
+                var context = {product: result[0]};
+
+                response.render('description',context);
+            });
+    });
 }
 
 module.exports = createRoutes;

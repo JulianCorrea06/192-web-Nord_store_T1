@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/styles/styleDesc.css">
+
+    <div class="description__price">
+        <p>$ {{product.price}}</p>
+    </div>
+<section class="description">
+    
+    <div class="description__img">
+        <img class="description__image" src="/data{{product.image}}" alt="imagen">
+    </div>
+
+<div class="description__text">
+    <p class="description__body">{{product.description}} </p>
+
+</div>
+
+</section>
+
+<section class="features">
+
+    <div>
+        <h4 class="features__content"> 
+            Tamaño: {{product.size}}
+        </h4>
+    </div>
+    <div>
+        <h4 class="features__content"> 
+            Estilo: {{product.style}}
+        </h4>
+    </div>
+    <div>
+        <h4 class="features__content"> 
+            Popularidad: {{product.popularity}}
+        </h4>
+    </div>
+</section>
