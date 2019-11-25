@@ -2,6 +2,7 @@ const assert = require('assert');
 const ObjectID = require ('mongodb').ObjectID;
 
 function createRoutes (app, db) {
+var cartList =[];
 
     app.get('/', (request, response) => {
         console.log('alguien entró a la ruta inicial');
@@ -22,6 +23,39 @@ function createRoutes (app, db) {
 
                 response.render('products',context);
             });
+    });
+
+    app.get('/carrito', (request, response) => {
+        const products = db.collection("products");
+        const cart = db.collection("carProducts");
+        console.log('Alguien entró al carrito');
+        
+        //buscamos los id de los productos que agregué al carro
+        cart.find({})
+        //transformamos el cursor en un arreglo
+        .toArray((err,result)=>{
+            //aseguramos de que no hay error
+            assert.equal(null, err);
+            
+            var idsCart = [];//un arreglo para guardar todos los ids que tengo en el carrito
+            result[0].products.forEach(id => {
+                idsCart.push(new ObjectID (id));//agrego todos los id al nuevo arreglo
+            });
+            console.log(idsCart);
+        
+            
+            //buscamos todos los productos
+            products.find({ _id: {$in: idsCart}})
+            //transformamos el cursor a un arreglo
+            .toArray((err, resultProducts) => {
+                //aseguramos de que no hay error
+                assert.equal(null, err);
+                var context = {
+                    products: resultProducts,
+                };
+                response.render('carProducts',context);
+            });
+        });
     });
 
    /* app.get('/kart', (request, response) => {
@@ -86,41 +120,97 @@ function createRoutes (app, db) {
             message: 'todo bien',
             arrayCart
         });
+/*** */
+var c=0;
+        for(c;c<result.length;c++){
+            if(request.params.id.toString()===result[c]._id.toString()){
+                esId=true;  
+                var i=0;
+
+                for(i;i<cartList.length;i++){
+                    
+                    if (request.params.id.toString()===cartList[i]._id.toString()){
+                        
+                        encuentraComun=true;
+
+                    } 
+                }
+                if(encuentraComun==true){
+                    console.log(cartList[c]);
+                    cartList[c].cantidad+=1;
+                }else{
+                    result[c].cantidad=cont;
+                    cartList.push(result[c]);
+                }
+                
+            } 
+        }
+
     });
 });
 
-app.get('/carrito', (request, response) => {
-    const products = db.collection('products');
-    const cart = db.collection("carProdcuts");
-    console.log('Alguien entró al carrito');
+/*
+app.post('/api/kart/:id', (request, response) => {
+    var id = request.params.id;
+    var query= {};        
     
-    //buscamos los id de los productos que agregué al carro
+    var esId=false;
+    var cont=1;
+    var encuentraComun=false;
+    
     cart.find({})
-    //transformamos el cursor en un arreglo
-    .toArray((err,result)=>{
-        //aseguramos de que no hay error
-        assert.equal(null, err);
+    // transformamos el cursor a un arreglo
+    .toArray((err, result) => {
+        // asegurarnos de que noh ay error
         
-        var idsCart = [];//un arreglo para guardar todos los ids que tengo en el carrito
-        result[0].products.forEach(id => {
-            idsCart.push(new ObjectID (id));//agrego todos los id al nuevo arreglo
-        });
-        console.log(idsCart);
-    
+        //
         
-        //buscamos todos los productos
-        products.find({ _id: {$in: idsCart}})
-        //transformamos el cursor a un arreglo
-        .toArray((err, resultProducts) => {
-            //aseguramos de que no hay error
-            assert.equal(null, err);
-            var context = {
-                products: resultProducts,
-            };
-            response.render('carProducts',context);
+        var c=0;
+        for(c;c<result.length;c++){
+            if(request.params.id.toString()===result[c]._id.toString()){
+                esId=true;  
+                var i=0;
+
+                for(i;i<cartList.length;i++){
+                    
+                    if (request.params.id.toString()===cartList[i]._id.toString()){
+                        
+                        encuentraComun=true;
+
+                    } 
+                }
+                if(encuentraComun==true){
+                    console.log(cartList[c]);
+                    cartList[c].cantidad+=1;
+                }else{
+                    result[c].cantidad=cont;
+                    cartList.push(result[c]);
+                }
+                
+            } 
+        }
+        
+        
+        if(!esId){
+            response.send({
+                message: 'error',
+                cartSize: cartList.length
+            });
+            return;
+        }
+        
+        
+        
+        response.send({
+            cartSize: cartList.length
         });
+        
     });
+    
+    
+    
 });
+*/
 
     app.get('/store/:id', (request, response) => {
 

@@ -1,8 +1,9 @@
 
+
 html{
     scroll-behavior: smooth;
-    
 }
+
 body{
     margin:0;
     background-color: rgba(229, 229, 229, 1);
@@ -19,19 +20,23 @@ body{
     position: fixed;
     top: -2px;
 }
+
 .itemBtn{
     border: none;
     background: none;
     cursor: pointer;
 }
+
 .header__logotipo{
+    padding-top:5px;
     padding-left: 10%;
     padding-right: 30px; 
     width: auto;
-    height: 60%;
+    height: 40px;
     margin: 10px;
     margin-right: 5vw;
 }
+
 .header__logotipo img{
     height: 80%;
     width: auto;
@@ -39,34 +44,31 @@ body{
 }
 
 .header__menu{
+    width:60%;
     font-family: 'Montserrat', sans-serif;
-    
     color: #fff;
     font-size: 100%;
     text-decoration: none;
     display: inline-block;
     padding-top: 1.4rem ;
-    
 }
 
 .header__menu img{
     margin-left: 20px;
     width: 20px;
     height: auto;
-    
     cursor: pointer;
 }
 
 .hypertext{
-    
     padding-left: 20px;
     padding-right: 20px; 
     text-decoration: none;
     color: #fff;
     outline: none;
     cursor: pointer;
-    
 }
+
 .hypertext:hover{
     opacity: 0.8;
 }
@@ -75,13 +77,13 @@ body{
 margin-left:2vw;
 height:20px;
 width: auto;
-
 }
+
 .glass{
     widows: 1.5vw;;
     height: 1.5vw;
-    
 }
+
 .main{
     margin-top: 60px;
     display: inline-flex;
@@ -119,8 +121,8 @@ input[type="radio"]:checked,
 input[type="checkbox"]:checked {
     background:#bc0404;
 }
+
 .form__text{
-    
     color: rgb(70, 70, 70);
     font-family: 'Montserrat', sans-serif;
     padding-left: 2vw;
@@ -128,7 +130,6 @@ input[type="checkbox"]:checked {
     margin-block-start: 0.5em;
     margin-block-end: 0.5em;
 }
-
 
 .products{
     margin-left:25vw ;
@@ -138,18 +139,15 @@ input[type="checkbox"]:checked {
     border: none;
     background: none;
     cursor: pointer;
-    
     align-self: flex-end;
     margin-top:-6vw;
-    
-   
     display: flex;
     align-content: flex-end;
     width: 60px;
     height: auto;
     padding: 1.5vw;
-
 }
+
 .filter__select{
 width: 50%;
 border: none;
@@ -165,7 +163,6 @@ margin:20px;
     color: white;
     padding: 2px 20px 2px 40px;
     margin-right: 8vw;
-
 }
 
 .subtitle{
@@ -178,10 +175,9 @@ margin:20px;
     width: 60%;
     outline: none;
 }
+
 .buffer__slider:hover{
-
     cursor: pointer;
-
 }
 
 .buffer__slider :focus {
@@ -203,7 +199,6 @@ margin-top: -7px;
 }
 
 .buffer__slider::-webkit-slider-runnable-track {
-    
     background-color:#bc0404;
     height: 0.3vw;
   }
@@ -217,25 +212,25 @@ margin-top: -7px;
   } 
 
 .buffer__label{
+
     color:gray;
     font-family: 'Montserrat', sans-serif;
-    
     font-size:1.3vw;
     position:relative;
     padding-left:3vw ;
     padding-top:7px ;
 }
     
-
 .hrc{
     margin-left: 15vw;
     margin-right:2vw;
 }
+
 .icon{
     width:5vw;
     height: 3vw;
-  
 }
+
 .items{
     widows: 100%;
     display:inline-flex;
@@ -245,8 +240,8 @@ margin-top: -7px;
     align-content: stretch;
     padding:1vw;
 }
+
 .item{
-   
     width: 24vw;
     height:14vw;
     display: flex;
@@ -259,27 +254,21 @@ margin-top: -7px;
     -webkit-box-shadow: 0px 10px 5px 1px rgba(98, 130, 201, 0.43);
     -moz-box-shadow: 0px 10px 5px 1px rgba(98, 130, 201, 0.43);
     box-shadow: 0px 10px 5px 1px rgba(98, 130, 201, 0.43);
- 
     border-radius: 10px;
 }
-
-
 
 .item:hover{
     cursor: pointer;
     border-top-width: 2vw;
     border-color: #bc0404;
-    
-
 }
+
 .item_img{
     margin:0.5vw;
     margin-top: 1vw;
     width:90%;
     height: 70%;
-
 }
-
 
 .name{
     align-self: flex-start;
@@ -288,8 +277,8 @@ margin-top: -7px;
     font-size: 1.8vw;;
     font-family: 'Montserrat', sans-serif;
     color: dimgray;
-
 }
+
 .price{
     align-self: flex-start;
     margin-left: 0.5vw;
@@ -298,6 +287,7 @@ margin-top: -7px;
     font-family: 'Montserrat', sans-serif;
     color: dimgray;
 }
+
 .hr{
     opacity: 250%;
 }
@@ -323,9 +313,11 @@ margin-top: -7px;
     font-size: 1.5vw;
     font-family: 'Montserrat', sans-serif;
 }
+
 .filter:hover{
     cursor: pointer;
 }
+
 footer{
     display:flex;
     widows: 100%;
@@ -342,13 +334,10 @@ footer{
     padding:2vw;
     width:6%;
 }
+
 .footer__logo{
-    
     width:auto;
     height:3vw;
-    
-    
-    
 }
 .f-text{
     margin-left: 5%;;
@@ -362,15 +351,12 @@ footer{
     flex-wrap: wrap;
 }
 
-
 .description{
     width: 100%;
-    
     display: inline-flex;
     align-content: space-around ;
     margin-left: 10%;
     margin-right: 10%;
-    
 }
 
 .description__image{
@@ -379,23 +365,18 @@ footer{
     border-radius: 10px;
     margin:10px;
     width: 100%;
-    
-    
 }
 
 .description__price{
     background: #bc0404;
     color: white;
-    
     margin: 10px ;
     margin-top: 140px;
     margin-left: 12%;
-
     top: -200px;
     width: 15%;
     height: 34px;
     text-align: center;
-    
     padding-left: 5px;
     padding-right: 5px;
     font-family: 'Montserrat', sans-serif;
@@ -404,7 +385,6 @@ footer{
 }
 
 .description__img{
-    
     padding: 10px;
     border-radius: 5px;
 }
@@ -414,7 +394,6 @@ footer{
     margin-top: 35px;
     margin-left: 8vw;
     margin-right: 2vw;
-
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     color: rgb(70, 70, 70);
@@ -425,9 +404,55 @@ footer{
     margin-right: 12%;
     display: inline-flex;
     align-content: space-between;
-   
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     color: rgb(70, 70, 70);
+}
+
+.shopping_counter{
+    width: 5%;
+    padding-left: 8px;
+    margin: 0;
+    display: inline;
+    
+}
+
+.header__cart{
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+
+
+
+@media (max-width: 838px){
+
+    .header{
+    height: 130px;
+    display: block;
+    }
+
+    .header__logotipo{
+        margin-bottom: 0;
+        height: 40%;
+        width: 130px;
+        padding:0;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .header__logotipo img{
+        margin-left: auto;
+        margin-right:auto;
+    }
+
+    .header__menu{
+        
+        width: 70%;
+        margin-left: 13vw;
+    }
+
 }
 
