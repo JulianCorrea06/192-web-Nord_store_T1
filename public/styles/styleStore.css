@@ -99,7 +99,7 @@ width: auto;
 }
 
 .filter_line{
-    margin-left: 350px;
+    margin-left: 24vw;
     margin-right: 50px;
 }
 
@@ -133,6 +133,8 @@ input[type="checkbox"]:checked {
 
 .products{
     margin-left:25vw ;
+    padding-left: 4vw;
+    
 }
 
 .kart_btn{
@@ -295,7 +297,7 @@ margin-top: -7px;
 .filter{
     margin:0.5vw;
     margin-left: 0.5vw;
-    font-size: 1.5vw;
+    font-size: 1.5rem;
     font-family: 'Montserrat', sans-serif;
     color: black;
     background-color: none;
@@ -303,15 +305,13 @@ margin-top: -7px;
     margin:2vw;
     display: inline-flex;
     width: 80%;;
-    margin-left: 400px;
-    margin-top:5vw;
+    margin-left: 32vw;
     padding-top: 6vw;
     align-content: center;
     align-items: center;
     margin-bottom: 0;
     margin-top: 0;
-    font-size: 1.5vw;
-    font-family: 'Montserrat', sans-serif;
+
 }
 
 .filter:hover{
@@ -450,8 +450,95 @@ footer{
 
     .header__menu{
         
+        width: 63%;
+        margin-left: 16vw;
+    }
+
+    .filter{
+        margin-top: 150px;
+        padding-top: 0;
+    }
+
+    .filter_line{
+        margin-left: 30vw;
+    }
+
+    .options{
+        top: 150px;
+    }
+
+}
+
+@media (max-width:600px){
+
+    .products{
+        margin-left: 34vw;
+        flex-direction: column;
+        flex-flow: column;
+    }
+
+    .items{
+        width: 90%;
+        height: 200px;
+        margin-bottom: 6vw;
+    }
+
+    .item{
+        width: 90%;
+        height: 150px;
+
+        margin-bottom: 12vw;
+    }
+
+    .name{
+        font-size: 1.2rem;
+    }
+    .price{
+        font-size: 1.2rem;
+    }
+
+    .filter{
+        font-size: 1rem;
+        margin-left: 40vw;
         width: 70%;
-        margin-left: 13vw;
+    }
+
+    .filter_line{
+        margin-left: 40vw;
+    }
+}
+
+@media (max-width: 411px){
+
+    .header{
+    height: 130px;
+    display: block;
+    }
+
+    .header__logotipo{
+        margin-bottom: 0;
+        height: 40%;
+        width: 130px;
+        padding:0;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .header__logotipo img{
+        margin-left: auto;
+        margin-right:auto;
+    }
+
+    .header__menu{
+        
+        width: 100%;
+        margin-left: 4vw;
+        font-size: 0.75rem;
+    }
+
+    .hypertext{
+        padding-right: 10px;
+        padding-left: 10px;
     }
 
 }
