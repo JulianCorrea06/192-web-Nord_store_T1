@@ -49,6 +49,7 @@ client.connect(function(err) {
     
 });
 //cambio chimbo
+//porfavor que coja el heroku
 //const client = new mongoClient("mongodb://localHost:27017");
 
 // definir una carpeta como pública
