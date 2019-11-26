@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const port = 4000;
 
 // importar mongo
-const MongoClient = require('./mongodb').MongoClient;
+const MongoClient = require('mongodb').MongoClient;
 //si dice requiere no es algo que se daba pasar, dice igual a algo si se debe pasar porque es una instancia
 const assert = require('assert');
 
