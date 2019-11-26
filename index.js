@@ -25,7 +25,7 @@ const assert = require('assert');
 const createRoutes = require('./routes.js');
 
 //Connection URL
-const url = 'mongodb://localhost:27017';
+const url = 'mongodb+srv://julianCo:interjuli1106@cluster0-33z1u.mongodb.net/test?retryWrites=true&w=majority';
 
 // Database Name
 const dbName = 'store';
@@ -55,6 +55,6 @@ client.connect(function(err) {
 app.use(express.static('public'));
 
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 4000, () => {
     console.log(`Servidor iniciado en el puerto ${port}`);
 });
