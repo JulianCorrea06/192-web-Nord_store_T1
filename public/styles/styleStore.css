@@ -690,6 +690,11 @@ footer{
     .kart_btn{
         position:relative;
         top: -20px;
+        
+    }
+
+    .kart_btn:focus{
+        outline: none;
     }
 
     .description__price{
