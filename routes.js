@@ -58,7 +58,8 @@ var cartList =[];
         });
     });
 
-   /* app.get('/kart', (request, response) => {
+
+    app.get('/kart', (request, response) => {
         const car = db.collection('carProducts');
 
         //buscamos todos los productos
@@ -73,6 +74,7 @@ var cartList =[];
                 response.render('carProducts',context);
             });
     });
+   /* 
 
     app.get('/kart', (request, response) => {
         const car = db.collection('carProducts');
@@ -103,6 +105,8 @@ var cartList =[];
     });
 });
 
+
+
    app.post('/api/kart/',(request,response)=>{
     const cart = db.collection('carProducts'); //selecciono la colección de la base de datos
     cart.find({}).toArray((err, result) => { //result es lo que me trae
@@ -122,29 +126,7 @@ var cartList =[];
         });
 /*** */
 var c=0;
-        for(c;c<result.length;c++){
-            if(request.params.id.toString()===result[c]._id.toString()){
-                esId=true;  
-                var i=0;
-
-                for(i;i<cartList.length;i++){
-                    
-                    if (request.params.id.toString()===cartList[i]._id.toString()){
-                        
-                        encuentraComun=true;
-
-                    } 
-                }
-                if(encuentraComun==true){
-                    console.log(cartList[c]);
-                    cartList[c].cantidad+=1;
-                }else{
-                    result[c].cantidad=cont;
-                    cartList.push(result[c]);
-                }
-                
-            } 
-        }
+        
 
     });
 });
