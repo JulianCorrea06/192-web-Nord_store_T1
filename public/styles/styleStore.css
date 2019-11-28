@@ -532,13 +532,69 @@ footer{
     .header__menu{
         
         width: 100%;
-        margin-left: 4vw;
+        margin-left: 2vw;
         font-size: 0.75rem;
+    }
+
+    .header__menu img{
+        margin:0;
     }
 
     .hypertext{
         padding-right: 10px;
         padding-left: 10px;
+    }
+
+    .options{
+    background-color: white;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 2em;
+    border-radius: 5px;
+    bottom: 40px;
+    top:-130px;
+    }
+
+    .subtitle{
+        text-align: center;
+        padding: 0;
+    }
+
+    .buffer__label{
+        text-align: center;
+    }
+
+    .buffer__slider{
+        align-content: center;
+        margin-left: 60px;
+    }
+
+    .options__form{
+        padding-left: 70px;
+     
+    }
+
+    .options__form2{
+        padding-left: 70px;
+    }
+
+    .products{
+        margin-left:4vw;
+        position: relative;
+        top: -30px;
+    }
+
+    .item{
+        margin-bottom: 80px;
+    }
+
+    .name{
+        margin-top:30px;
+    }
+
+    .kart_btn{
+        position:relative;
+        top: -20px;
     }
 
 }
