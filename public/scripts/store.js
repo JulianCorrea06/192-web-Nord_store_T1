@@ -3,6 +3,8 @@ window.addEventListener('load', function(){
   var car = document.querySelectorAll('.kart_btn');
   var shopping_counter = document.querySelector('.shopping_counter');
 
+
+
  /* car.forEach(product=>{
 
     product.addEventListener("click", function(){
@@ -28,6 +30,12 @@ window.addEventListener('load', function(){
 
     btn.addEventListener('click', function(event){
         
+//Realizar la interacciónde moverse cuando le das click
+
+TweenMax.to(this, 0.4, {scale:1.5, ease:Bounce.easeOut})
+    TweenMax.to(this, 0.2, {scale:1, delay:0.4})
+
+      
         event.preventDefault();
 
         var data = new URLSearchParams();
