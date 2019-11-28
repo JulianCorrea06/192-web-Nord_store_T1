@@ -1,15 +1,27 @@
 <section class="options">
     <h2 class="title">MI CARRITO</h2>
-    <P class="subtitle__2"> Para realizar la compra por favor llene con sus datos</P>
+    <P class="subtitle__2"> Para realizar la compra por favor <br> llene con sus datos</P>
     
     <form class="options__form">
        
-       
-        
+       <div class="text_inputs"> 
+						<input class="form__input" type="text" name="name" placeholder="Nombre y Apellido">
+						<input class="form__input" type="text" name="cc" placeholder="Cédula">
+                        <input class="form__input" type="text" name="adress" placeholder="Dirección">
+        </div>
+    
+    <P class="subtitle__2">Por favor elija su método de pago</P>
+
+        <p class="form__text"> <input type="radio" name="Pago" value="Efectivo"> Efectivo</p>
+        <p class="form__text"> <input type="radio" name="Pago" value="Efectivo"> Tarjeta</p>
+
+        <input class="submit__buy" type="submit" name="Comprar">
       </form>
 
 </section>  
+<section class="space">
 
+</section>
 <section class="products">
 {{#each products}}
 <div class="items">

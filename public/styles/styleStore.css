@@ -172,6 +172,14 @@ margin:20px;
     font-family: 'Montserrat', sans-serif;
     padding-left:3vw;
 }
+
+.subtitle__2{
+    color: #bc0404;
+    font-family: 'Montserrat', sans-serif;
+    padding-left:3vw;
+    text-align: center;
+    padding-right:3vw ;
+}
 .buffer__slider{
    padding-left: 3vw;
     width: 60%;
@@ -424,6 +432,41 @@ footer{
     font-size: 1rem;
 }
 
+.text_inputs{
+    display: inline-flex;
+    flex-flow: column;
+    flex-direction: column;
+    padding-left: 15% ;
+    width: 70%;
+    
+}
+
+.form__input{
+    border-left-width: 0;
+    border-top-width: 0;
+    border-right-width: 0;
+
+    font-size: 15px;
+    padding: 4px;
+
+    margin-bottom:15px ;
+}
+
+.submit__buy{
+    border-width: 0px;
+    color: white;
+    background: #bc0404;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    padding: 5px 10px;
+    margin-left: 10vw;
+    margin-top: 10px;
+}
+
+.space{
+    margin-bottom: 80px;
+}
 
 
 
