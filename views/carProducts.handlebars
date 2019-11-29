@@ -1,4 +1,4 @@
-<section class="options">
+    <section class="options">
     <h2 class="title">MI CARRITO</h2>
     <P class="subtitle__2"> Para realizar la compra por favor <br> llene con sus datos</P>
     
@@ -16,6 +16,7 @@
         <p class="form__text"> <input type="radio" name="Pago" value="Efectivo"> Tarjeta</p>
 
         <input class="submit__buy" type="submit" name="Comprar">
+        
       </form>
 
 </section>  
@@ -27,8 +28,13 @@
 <div class="items">
         <div class="item">
             <Button class="itemBtn"><a href="/store/{{this._id}}"><img class="item_img" src="data{{image}}" alt="item_img"></Button></a></Button>
+            <div class="item__elements">
+            <div class="texts">
             <div class="name">{{name}}</div>
             <div class="price">$ {{price}}</div>
+            </div>
+            <Button data-id="{{this._id}}" class="minuskart_btn"><img class="minuskart" src="/data/minuskart.png" alt="kart"></Button>
+            </div>
         </div>
 </div>
 {{/each}}
@@ -40,3 +46,4 @@
 
 
 <script src="/scripts/store.js"> </script>
+<script src="/scripts/form.js"> </script>

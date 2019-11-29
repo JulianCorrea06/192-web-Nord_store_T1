@@ -8,23 +8,6 @@ var cartList =[];
         console.log('alguien entró a la ruta inicial');
         response.sendFile(__dirname + '/public/index.html');
     });
-
-    app.get('/store', (request, response) => {
-        const products = db.collection('products');
-
-        //buscamos todos los productos
-        products.find({})
-            //transformamos el cursor a una arreglo
-            .toArray((err, result) => {
-                //aseguramos de que no hay error
-                assert.equal(null, err);
-
-                var context = {products: result}
-
-                response.render('products',context);
-            });
-    });
-
     app.get('/carrito', (request, response) => {
         const products = db.collection("products");
         const cart = db.collection("carProducts");
@@ -105,6 +88,86 @@ var cartList =[];
     });
 });
 
+app.get('/store', (request, response) => {
+    const products = db.collection('products');
+
+    var filters = {}
+    if(request.query.price != undefined) {
+        filters.price = { $lte: parseInt(request.query.price) };
+    }
+    //buscamos todos los productos
+    products.find(filters)
+        //transformamos el cursor a una arreglo
+        .toArray((err, result) => {
+            //aseguramos de que no hay error
+            assert.equal(null, err);
+
+            var context = {products: result}
+
+            response.render('products',context);
+        });
+});
+
+app.get('/api/filters', (request, response)=>{
+    const products = db.collection("products");
+    
+
+
+    if(request.query.selectValue == "mayor_precio"){
+        copyProducts.find().sort({price: -1})
+        .toArray((err,result)=>{
+            assert.equal(null,err);
+            response.send(result);
+            
+        });
+    }
+
+    if(request.query.selectValue == "menor_precio"){
+        copyProducts.find().sort({price: 1})
+        .toArray((err,result)=>{
+            assert.equal(null,err);
+            response.send(result);
+        });
+    }
+
+    if(request.query.selectValue == "mayor_popularidad"){
+        copyProducts.find().sort({popularity: -1})
+        .toArray((err,result)=>{
+            assert.equal(null,err);
+            response.send(result);
+        });
+    }
+
+    if(request.query.selectValue == "menor_popularidad"){
+        copyProducts.find().sort({popularity: 1})
+        .toArray((err,result)=>{
+            assert.equal(null,err);
+            response.send(result);
+        });
+    }
+
+    if(request.query.selectValue == "mayor_tamaño"){
+        copyProducts.find().sort({size: -1})
+        .toArray((err,result)=>{
+            assert.equal(null,err);
+            response.send(result);
+        });
+    }
+
+    if(request.query.selectValue == "menor_tamaño"){
+        copyProducts.find().sort({size: 1})
+        .toArray((err,result)=>{
+            assert.equal(null,err);
+            response.send(result);
+        });
+    }
+
+    var context ={
+        prodcuts: copyProducts
+    };
+   response.render('store', context);
+
+});
 
 
    app.post('/api/kart/',(request,response)=>{
@@ -125,10 +188,29 @@ var cartList =[];
             arrayCart
         });
 /*** */
-var c=0;
-        
+
 
     });
+});
+
+app.post('/api/formulary/',(request,response)=>{
+    const cart = db.collection('carProducts'); //selecciono la colección de la base de datos
+    const buycart = db.collection('Buy');
+
+    cart.find({}).toArray((err, result) => {
+        assert.equal(null, err);
+
+        var car = result[0];
+request.body.products = car.products;
+buycart.insertOne(request.body);
+
+response.send({
+    message: 'ok'
+});
+
+    });
+
+    
 });
 
 /*

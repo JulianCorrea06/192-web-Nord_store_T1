@@ -150,6 +150,10 @@ input[type="checkbox"]:checked {
     padding: 1.5vw;
 }
 
+.kart_btn:focus{
+    outline: none;
+}
+
 .filter__select{
 width: 50%;
 border: none;
@@ -468,6 +472,22 @@ footer{
     margin-bottom: 80px;
 }
 
+.submit__buy{
+    cursor: pointer;
+}
+
+.item__elements{
+    display: flex;
+    flex-flow: row;
+
+}
+
+.minuskart_btn{
+    height: 40px;
+    width: 52px;
+    margin-top: 60px;
+    margin-left: 20px;
+}
 
 
 @media (max-width: 838px){
