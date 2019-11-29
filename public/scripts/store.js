@@ -128,7 +128,7 @@ TweenMax.to(this, 0.4, {scale:1.5, ease:Bounce.easeOut})
 
  
 
-
+/*
  function filters(order){
 
   fetch('/api/filters' + order)
@@ -146,8 +146,9 @@ return response.json();
 select.addEventListener('change', function(){
 
 filters('?selectValue='+select.value);
+
   
-});
+});*/
 
 
 }) ;

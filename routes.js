@@ -95,6 +95,13 @@ app.get('/store', (request, response) => {
     if(request.query.price != undefined) {
         filters.price = { $lte: parseInt(request.query.price) };
     }
+   /*  if(Array.isArray(request.query.type)) {
+        filters.type = { $in: request.query.type};
+    } else if(type != undefined) {
+        filters.type = request.query.type;
+    }  */
+    console.log(request.query.type);
+
     //buscamos todos los productos
     products.find(filters)
         //transformamos el cursor a una arreglo
@@ -107,7 +114,7 @@ app.get('/store', (request, response) => {
             response.render('products',context);
         });
 });
-
+/*
 app.get('/api/filters', (request, response)=>{
     const products = db.collection("products");
     
@@ -168,6 +175,7 @@ app.get('/api/filters', (request, response)=>{
    response.render('store', context);
 
 });
+*/
 
 
    app.post('/api/kart/',(request,response)=>{
