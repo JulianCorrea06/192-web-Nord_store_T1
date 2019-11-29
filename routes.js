@@ -57,25 +57,7 @@ var cartList =[];
                 response.render('carProducts',context);
             });
     });
-   /* 
-
-    app.get('/kart', (request, response) => {
-        const car = db.collection('carProducts');
-
-        //buscamos todos los productos
-        car.find({})
-            //transformamos el cursor a una arreglo
-            .toArray((err, result) => {
-                //aseguramos de que no hay errorno
-                assert.equal(null, err);
-
-                var context = {product: result[0]};
-
-                response.render('carProducts',context);
-            });
-    });
-
-    */
+ 
 
    app.get('/api/kart/',(request,response)=>{
     const cart = db.collection('carProducts');
@@ -95,12 +77,13 @@ app.get('/store', (request, response) => {
     if(request.query.price != undefined) {
         filters.price = { $lte: parseInt(request.query.price) };
     }
+
    /*  if(Array.isArray(request.query.type)) {
         filters.type = { $in: request.query.type};
     } else if(type != undefined) {
         filters.type = request.query.type;
     }  */
-    console.log(request.query.type);
+    console.log('Type: '+request.query.price);
 
     //buscamos todos los productos
     products.find(filters)
@@ -114,68 +97,6 @@ app.get('/store', (request, response) => {
             response.render('products',context);
         });
 });
-/*
-app.get('/api/filters', (request, response)=>{
-    const products = db.collection("products");
-    
-
-
-    if(request.query.selectValue == "mayor_precio"){
-        copyProducts.find().sort({price: -1})
-        .toArray((err,result)=>{
-            assert.equal(null,err);
-            response.send(result);
-            
-        });
-    }
-
-    if(request.query.selectValue == "menor_precio"){
-        copyProducts.find().sort({price: 1})
-        .toArray((err,result)=>{
-            assert.equal(null,err);
-            response.send(result);
-        });
-    }
-
-    if(request.query.selectValue == "mayor_popularidad"){
-        copyProducts.find().sort({popularity: -1})
-        .toArray((err,result)=>{
-            assert.equal(null,err);
-            response.send(result);
-        });
-    }
-
-    if(request.query.selectValue == "menor_popularidad"){
-        copyProducts.find().sort({popularity: 1})
-        .toArray((err,result)=>{
-            assert.equal(null,err);
-            response.send(result);
-        });
-    }
-
-    if(request.query.selectValue == "mayor_tamaño"){
-        copyProducts.find().sort({size: -1})
-        .toArray((err,result)=>{
-            assert.equal(null,err);
-            response.send(result);
-        });
-    }
-
-    if(request.query.selectValue == "menor_tamaño"){
-        copyProducts.find().sort({size: 1})
-        .toArray((err,result)=>{
-            assert.equal(null,err);
-            response.send(result);
-        });
-    }
-
-    var context ={
-        prodcuts: copyProducts
-    };
-   response.render('store', context);
-
-});
-*/
 
 
    app.post('/api/kart/',(request,response)=>{
@@ -221,68 +142,7 @@ response.send({
     
 });
 
-/*
-app.post('/api/kart/:id', (request, response) => {
-    var id = request.params.id;
-    var query= {};        
-    
-    var esId=false;
-    var cont=1;
-    var encuentraComun=false;
-    
-    cart.find({})
-    // transformamos el cursor a un arreglo
-    .toArray((err, result) => {
-        // asegurarnos de que noh ay error
-        
-        //
-        
-        var c=0;
-        for(c;c<result.length;c++){
-            if(request.params.id.toString()===result[c]._id.toString()){
-                esId=true;  
-                var i=0;
 
-                for(i;i<cartList.length;i++){
-                    
-                    if (request.params.id.toString()===cartList[i]._id.toString()){
-                        
-                        encuentraComun=true;
-
-                    } 
-                }
-                if(encuentraComun==true){
-                    console.log(cartList[c]);
-                    cartList[c].cantidad+=1;
-                }else{
-                    result[c].cantidad=cont;
-                    cartList.push(result[c]);
-                }
-                
-            } 
-        }
-        
-        
-        if(!esId){
-            response.send({
-                message: 'error',
-                cartSize: cartList.length
-            });
-            return;
-        }
-        
-        
-        
-        response.send({
-            cartSize: cartList.length
-        });
-        
-    });
-    
-    
-    
-});
-*/
 
     app.get('/store/:id', (request, response) => {
 

@@ -13,6 +13,7 @@ window.addEventListener('load', function(){
 function handleChange() {
   var route = '?price='+range.value;
   checkboxes.forEach((checkbox) => {
+      console.log('Checkbox:'+checkbox);
     if(checkbox.cheked) {
        route = route.concat('&type='+checkbox.value);
     }
@@ -31,26 +32,7 @@ var range = document.querySelector('.buffer__slider');
 range.addEventListener('change', handleChange);
 
 
- /* car.forEach(product=>{
-
-    product.addEventListener("click", function(){
-
-      var data = new URLSearchParams();
-      data.append("idProduct",addToCart.getAttribute("data-id"));
-
-      var promise = fetch('/api/kart/',{
-        method: 'POST',
-        body : data
-    });
-
-    promise.then((raw)=>{
-        return raw.json();
-    }).then(info =>{
-      displayCart();
-      console.log(data);
-    });
-  });
-  */
+ 
 
   car.forEach(function(btn) {
 
@@ -96,11 +78,11 @@ TweenMax.to(this, 0.4, {scale:1.5, ease:Bounce.easeOut})
           event.preventDefault();
   
           var data = new URLSearchParams();   
-          data.delete("idProduct", btn.getAttribute("data-id")); //idProduct es el nombre de la variable
+          data.append("idProduct", btn.getAttribute("data-id")); //idProduct es el nombre de la variable
   
           // console.log("helow madafaka")
   
-          var promise = fetch('/api/kart/', { method: 'POST', body : data });
+          var promise = fetch('/api/kart/', { method: 'DELETE', body : data });
   
           promise.then(function(response) {
                   console.log(response);
