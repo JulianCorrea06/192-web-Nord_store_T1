@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/JulianCorrea06/192-web-Nord_store_T1#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-handlebars": "^3.1.0",
     "mongodb": "^3.3.5"
   },
